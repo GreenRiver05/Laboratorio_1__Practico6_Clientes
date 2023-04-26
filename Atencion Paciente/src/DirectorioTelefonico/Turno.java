@@ -1,4 +1,4 @@
-package atencionpacientes;
+package DirectorioTelefonico;
 
 import java.util.Collection;
 import java.util.HashMap;
