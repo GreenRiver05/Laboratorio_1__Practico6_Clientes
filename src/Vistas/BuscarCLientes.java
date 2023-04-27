@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Practico6_DirectorioTelefonico;
+package Vistas;
 
 /**
  *
  * @author La Maquina
  */
-public class NewJInternalFrame extends javax.swing.JInternalFrame {
+public class BuscarCLientes extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form NewJInternalFrame
+     * Creates new form BuscarCLientes
      */
-    public NewJInternalFrame() {
+    public BuscarCLientes() {
         initComponents();
     }
 

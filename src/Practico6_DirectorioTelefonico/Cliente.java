@@ -1,29 +1,29 @@
 package Practico6_DirectorioTelefonico;
 
-public class Clientes {
+public class Cliente {
 
-    int dni;
+    String dni;  
     String nombre;
     String apellido;
     String ciudad;
     String direccion;
 
-    public Clientes(int dni, String nombre, String apellido, String ciudad, String direccion) {
-        this.dni = dni;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.ciudad = ciudad;
-        this.direccion = direccion;
+//    public Cliente(int dni, String nombre, String apellido, String ciudad, String direccion) {
+//        this.dni = dni;
+//        this.nombre = nombre;
+//        this.apellido = apellido;
+//        this.ciudad = ciudad;
+//        this.direccion = direccion;
+//    }
+
+    public Cliente() {  //eliminamos los constructores ya que no los necesito
     }
 
-    public Clientes() {
-    }
-
-    public int getDni() {
+    public String getDni() {
         return dni;
     }
 
-    public void setDni(int dni) {
+    public void setDni(String dni) {
         this.dni = dni;
     }
 
@@ -59,6 +59,8 @@ public class Clientes {
         this.direccion = direccion;
     }
 
+
+    
     @Override
     public String toString() {
         return "Clientes{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", ciudad=" + ciudad + ", direccion=" + direccion + '}';
