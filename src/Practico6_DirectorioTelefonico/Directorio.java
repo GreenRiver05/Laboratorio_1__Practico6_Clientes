@@ -10,14 +10,14 @@ import javax.swing.JOptionPane;
 
 public class Directorio {   //cambiamos el nombre de la clase
 
-    private Map<Long, Cliente> guiaTelefonica;   //cambiamos el nombre del mapa
+    private Map<String, Cliente> guiaTelefonica;   //cambiamos el nombre del mapa
 
     public Directorio() {
         guiaTelefonica = new HashMap<>();
     }
 
     public void agregarCliente() {
-        long telefono=0;
+        String telefono;
         Scanner leer = new Scanner(System.in);
         Cliente usuario = new Cliente();
         System.out.println("    ~~ Cliente Nuevo ~~\n");
@@ -26,27 +26,22 @@ public class Directorio {   //cambiamos el nombre de la clase
         System.out.print("Apellido..>> ");
         usuario.apellido = leer.next();
         System.out.print("Dni.......>> ");
-        usuario.dni = leer.next();
+        usuario.dni = leer.next();   
         System.out.print("Ciudad....>> ");
-        usuario.ciudad = leer.next();
+        usuario.ciudad = leer.next();  
         System.out.print("Direccion.>> ");
-        usuario.direccion = leer.next();
+        usuario.direccion = leer.next();  
         System.out.print("Telefono..>> ");
         
         //investigar clases patter y matcher       CAMBIAR LA CLAVE COMO STRING   O HACER PARCEO
-        try{
-        telefono = leer.nextLong();
-        }catch (Exception ex){
-            System.out.println("Error");
-        }
+       // try{
+        telefono = leer.next();
+      //  }catch (Exception ex){
+      //      System.out.println("Error");
+      //  }
         guiaTelefonica.put(telefono, usuario);
         
-//        pacientes.put(10, new Paciente("Juan Perez", 35698546, "critico"));
-//        pacientes.put(3, new Paciente("Mario Tojas", 34698516, "leve"));
-//        pacientes.put(11, new Paciente("Arian Sara", 31600046, "medio"));
-//        pacientes.put(1, new Paciente("Jesica Montiveros", 65898546, "critico"));
-//        pacientes.put(15, new Paciente("Julieta Ochoa", 31238546, "critico"));
-//        pacientes.put(5, new Paciente("Vivi Blasco", 3168946, "leve"));
+
     }
 //
 //    public void mostrarPacientes() {
@@ -75,17 +70,17 @@ public class Directorio {   //cambiamos el nombre de la clase
 //            System.out.println("La clave es " + clave + " el valor es " + valor);
 //        }
 //    }
-//
-//    public Paciente buscarCliente(Integer numero) {
-//        Paciente p = null;
-//        if (pacientes.containsKey(numero)) {
-//            p = pacientes.get(numero);
-//            System.out.println(p);
-//        }
-//        return p;
-//
-//    }
-//
+////
+    public Cliente buscarCliente(String telefono){
+        Cliente p = null;
+        if (guiaTelefonica.containsKey(telefono)) {
+            p = guiaTelefonica.get(telefono);
+            System.out.println(p);
+        }
+        return p;
+
+    }
+
 //    public void buscarTodos(String tipo) {
 //
 //        Collection valores = pacientes.values();

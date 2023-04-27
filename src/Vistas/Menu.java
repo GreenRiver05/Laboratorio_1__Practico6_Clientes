@@ -5,6 +5,8 @@
  */
 package Vistas;
 
+
+
 /**
  *
  * @author La Maquina
@@ -38,7 +40,7 @@ public class Menu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        escritorio.setBackground(new java.awt.Color(0, 153, 153));
+        escritorio.setBackground(new java.awt.Color(204, 204, 204));
         escritorio.setForeground(new java.awt.Color(204, 204, 0));
         escritorio.setToolTipText("");
 
@@ -113,7 +115,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu2ActionPerformed
 
     private void jCheckBoxMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem1ActionPerformed
-       system.salir(0);
+      dispose(); // salir
     }//GEN-LAST:event_jCheckBoxMenuItem1ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
