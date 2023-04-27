@@ -1,4 +1,4 @@
-package DirectorioTelefonico;
+package Practico6_DirectorioTelefonico;
 
 public class DirectorioTelefonico{
 

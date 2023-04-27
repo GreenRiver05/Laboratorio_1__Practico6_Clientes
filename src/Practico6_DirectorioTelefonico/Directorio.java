@@ -1,4 +1,4 @@
-package DirectorioTelefonico;
+package Practico6_DirectorioTelefonico;
 
 import java.util.Collection;
 import java.util.HashMap;
