@@ -2,13 +2,11 @@ package Practico6_DirectorioTelefonico;
 
 public class Cliente {
 
-    public static final String nada = "\u001B[0m";
-    public static final String rojo = "\u001B[31m";
-    public static final String verde = "\u001B[32m";
-    public static final String amarillo = "\u001B[33m";
-    public static final String violeta = "\u001B[35m";
-    public static final String celeste = "\u001B[36m";
-    public static final String negroF = "\u001B[40m";
+    public static final String nada = "\u001B[0m";                      // se utilizo ANSI escape code, color caractares
+    public static final String rojo = "\u001B[31m";                     // se utilizo ANSI escape code, color caractares
+    public static final String verde = "\u001B[32m";                    // se utilizo ANSI escape code, color caractares
+    public static final String amarillo = "\u001B[33m";                 // se utilizo ANSI escape code, color caractares
+    public static final String violeta = "\u001B[35m";                  // se utilizo ANSI escape code, color caractares
     String dni;
     String nombre;
     String apellido;
@@ -22,6 +20,7 @@ public class Cliente {
         this.ciudad = ciudad;
         this.direccion = direccion;
     }
+
     public Cliente() {  //eliminamos los constructores ya que no los necesito
     }
 
@@ -67,11 +66,18 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return amarillo + "\nNombre....... " + nada + nombre + amarillo 
+        return amarillo + "\nNombre....... " + nada + nombre + amarillo
                 + "\nApellido..... " + nada + apellido + amarillo
                 + "\nCiudad....... " + nada + ciudad + amarillo
                 + "\nDireccion.... " + nada + direccion + amarillo
                 + "\nDNI.......... " + nada + dni;
     }
 
+    public String toString1() {
+           return rojo + "\nNombre....... " + nada + nombre + rojo
+                + "\nApellido..... " + nada + apellido + rojo
+                + "\nCiudad....... " + nada + ciudad + rojo
+                + "\nDireccion.... " + nada + direccion + rojo
+                + "\nDNI.......... " + nada + dni;
+    }
 }
