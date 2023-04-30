@@ -18,37 +18,38 @@ public class TestDirectorio {
         Directorio guia = new Directorio();
 
         int opMenuPrincipal, opAgregar, opBuscar;
-        System.out.println("       ♦  DIRECTORIO  ♦  ");
-        do {
 
+        do {
+            System.out.println(violeta + "                      ♦  DIRECTORIO  ♦  ");
             System.out.println("");
-            System.out.println(violeta + "1)" + nada + " AGREGAR CLIENTE" + verde + " +");
-            System.out.println(violeta + "2)" + nada + " BUSCAR CLIENTE" + amarillo + " ○");
-            System.out.println(violeta + "3)" + nada + " BORRAR CLIENTE" + rojo + " —");
-            System.out.println(violeta + "4)" + nada + " CERRAR DIRECTORIO" + rojo + " ×");
+            System.out.println(violeta + "1)" + nada + " AGREGAR CLIENTE");
+            System.out.println(violeta + "2)" + nada + " BUSCAR CLIENTE");
+            System.out.println(violeta + "3)" + nada + " BORRAR CLIENTE");
+            System.out.println(violeta + "4)" + nada + " CERRAR DIRECTORIO");
             System.out.println("");
-            System.out.print(celeste + "Opcion" + nada + " --> ");
+            System.out.print(violeta + "Opcion" + nada + " --> ");
             opMenuPrincipal = leer.nextInt();
 
             switch (opMenuPrincipal) {
 
                 case 1:
-                    System.out.println("\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+                    System.out.println("\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
+                    System.out.println(verde + "                      + AGREGAR CLIENTE +  ");
                     guia.agregarCliente();
-                    System.out.println("");
+
                     do {
-                        System.out.println(violeta + "1)" + nada + " AGREGAR OTRO CLIENTE");
-                        System.out.println(violeta + "2) " + nada + "VOLVER AL MENU PRINCIPAL");
+                        System.out.println(verde + "\n1)" + nada + " AGREGAR OTRO CLIENTE");
+                        System.out.println(verde + "2) " + nada + "VOLVER AL MENU PRINCIPAL");
                         System.out.println("");
-                        System.out.print(celeste + "Opcion" + nada + " --> ");
+                        System.out.print(verde + "Opcion" + nada + " --> ");
                         opAgregar = leer.nextInt();
                         switch (opAgregar) {
                             case 1:
-                                System.out.println(amarillo + "………………………………………………………………………………\n" + nada);
+                                System.out.println(verde + "………………………………………………………………………………\n");
                                 guia.agregarCliente();
                                 break;
                             case 2:
-                                System.out.println("\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
+                                System.out.println("\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
                                 break;
                             default:
                                 System.out.println("\n" + rojo + "     ¤ OPCION INVALIDA ¤ " + nada + " Ingrese |1| o |2|");
@@ -57,34 +58,39 @@ public class TestDirectorio {
                     break;
 
                 case 2:
+                    System.out.println("\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
+                    System.out.println(amarillo + "                      ○ BUSCAR CLIENTE ○  \n");
                     do {
+
                         System.out.println("");
-                        System.out.println(violeta + "1)" + nada + " BUSCAR POR TELEFONO " + verde + " +");
-                        System.out.println(violeta + "2)" + nada + " BUSCAR POR APELLIDO" + amarillo + " ○");
-                        System.out.println(violeta + "3)" + nada + " BUSCAR POR CIUDAD" + rojo + " —");
-                        System.out.println(violeta + "4)" + nada + " VOLVER AL MENU PRINCIPAL" + rojo + " ×");
+                        System.out.println(amarillo + "1)" + nada + " BUSCAR POR TELEFONO ");
+                        System.out.println(amarillo + "2)" + nada + " BUSCAR POR APELLIDO");
+                        System.out.println(amarillo + "3)" + nada + " BUSCAR POR CIUDAD");
+                        System.out.println(amarillo + "4)" + nada + " VOLVER AL MENU PRINCIPAL");
                         System.out.println("");
-                        System.out.print(celeste + "Opcion" + nada + " --> ");
+                        System.out.print(amarillo + "Opcion" + nada + " --> ");
                         opBuscar = leer.nextInt();
-                        
+
                         switch (opBuscar) {
                             case 1:
-                                 System.out.println(amarillo + "………………………………………………………………………………\n" + nada);
-                                 System.out.println("Ingrese el numero de telefono > ");
-                                 String telefono = leer.next();
-                                 guia.buscarCliente(telefono);
+                                System.out.println(amarillo + "………………………………………………………………………………");
+                                System.out.println(amarillo + "………………………………………………………………………………");
+                                guia.buscarCliente();
+                                System.out.println(amarillo + "\n………………………………………………………………………………");
+                                System.out.println(amarillo + "………………………………………………………………………………");
                                 break;
                             case 2:
                                 break;
                             case 3:
                                 break;
-                            case 4:                                     
-                                 break;
+                            case 4:
+                                System.out.println("\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
+                                break;
                             default:
-                                 System.out.println("\n" + rojo + "      ¤ OPCION INVALIDA ¤ Ingrese una opcion dentro del menu");
+                                System.out.println("\n" + rojo + "      ¤ OPCION INVALIDA ¤ Ingrese una opcion dentro del menu");
                         }
 
-                    } while (opBuscar!=4);
+                    } while (opBuscar != 4);
 
                     break;
 

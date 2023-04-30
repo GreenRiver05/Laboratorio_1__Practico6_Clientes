@@ -2,20 +2,26 @@ package Practico6_DirectorioTelefonico;
 
 public class Cliente {
 
-    String dni;  
+    public static final String nada = "\u001B[0m";
+    public static final String rojo = "\u001B[31m";
+    public static final String verde = "\u001B[32m";
+    public static final String amarillo = "\u001B[33m";
+    public static final String violeta = "\u001B[35m";
+    public static final String celeste = "\u001B[36m";
+    public static final String negroF = "\u001B[40m";
+    String dni;
     String nombre;
     String apellido;
     String ciudad;
     String direccion;
 
-//    public Cliente(int dni, String nombre, String apellido, String ciudad, String direccion) {
-//        this.dni = dni;
-//        this.nombre = nombre;
-//        this.apellido = apellido;
-//        this.ciudad = ciudad;
-//        this.direccion = direccion;
-//    }
-
+    public Cliente(String dni, String nombre, String apellido, String ciudad, String direccion) {
+        this.dni = dni;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.ciudad = ciudad;
+        this.direccion = direccion;
+    }
     public Cliente() {  //eliminamos los constructores ya que no los necesito
     }
 
@@ -59,15 +65,13 @@ public class Cliente {
         this.direccion = direccion;
     }
 
-
-    
     @Override
     public String toString() {
-        return "Clientes{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", ciudad=" + ciudad + ", direccion=" + direccion + '}';
+        return amarillo + "\nNombre....... " + nada + nombre + amarillo 
+                + "\nApellido..... " + nada + apellido + amarillo
+                + "\nCiudad....... " + nada + ciudad + amarillo
+                + "\nDireccion.... " + nada + direccion + amarillo
+                + "\nDNI.......... " + nada + dni;
     }
 
-    
-    
- }
-
-    
+}
