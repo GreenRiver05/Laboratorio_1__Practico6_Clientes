@@ -10,13 +10,14 @@ public class DirectorioVentanas {
 
     public DirectorioVentanas() {                    // al crear el mapa, se crean tambien clientes, mas que nada para ya tener
         guiaTelefonica = new HashMap<>();            //una lista y ir probando y no tener que ingresar cada vez que probramos
-        
+       
         guiaTelefonica.put(1L, new Cliente("4589125", "Hernesto", "quito", "villa mercedes", "Mitre 2345"));
         guiaTelefonica.put(2L, new Cliente("77898", "Carlota", "quito", "villa mercedes", "Turrado 125"));
         guiaTelefonica.put(3L, new Cliente("4215", "Charles", "chaplin", "san luis", "España 589"));
         guiaTelefonica.put(4L, new Cliente("689825", "Aquiles", "vaesa", "san luis", "Rivadavia 1158"));
         guiaTelefonica.put(5L, new Cliente("4554899", "Hernesto", "vaesa", "villa mercedes", "Perdernera 555"));
         guiaTelefonica.put(6L, new Cliente("896689", "Esteban", "quito", "justo darac", "San Lorenzo 115"));
+      
     }
 
     public boolean agregarCliente(Long telefono, Cliente usuario) {
@@ -45,7 +46,7 @@ public class DirectorioVentanas {
 
             if (c.getValue().getApellido().equals(apellido)) {
 
-                Cliente put = clientesApellidos.put(c.getKey(), c.getValue());
+                clientesApellidos.put(c.getKey(), c.getValue());
             }
         }
 

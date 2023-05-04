@@ -32,6 +32,7 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
         jbAgregar = new javax.swing.JButton();
         jbNuevo = new javax.swing.JButton();
         jbSalir = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         jFormattedTextField1.setText("jFormattedTextField1");
 
@@ -39,6 +40,13 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
+        setTitle("Agregar Cliente");
+
+        jtTelefono.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtTelefonoActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("AGREGAR CLIENTE");
@@ -69,6 +77,7 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
 
         jbAgregar.setFont(new java.awt.Font("Dialog", 1, 17)); // NOI18N
         jbAgregar.setText("AGREGAR");
+        jbAgregar.setEnabled(false);
         jbAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbAgregarActionPerformed(evt);
@@ -90,6 +99,8 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
                 jbSalirActionPerformed(evt);
             }
         });
+
+        jLabel2.setText("Presione Enter para continuar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -119,23 +130,27 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(148, 148, 148))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(jbNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(47, 47, 47))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtDni, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtDni, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(jbNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(47, 47, 47))))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(141, 141, 141))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,7 +183,9 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 21, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -184,23 +201,29 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jbSalirActionPerformed
 
     private void jbAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAgregarActionPerformed
-        String dni = jtDni.getText();
-        String nombre = jtNombre.getText();
-        String apellido = jtApellido.getText();
-        String ciudad = jtCiudad.getText();
-        String direccion = jtDireccion.getText();
-        Long telefono = Long.parseLong(jtTelefono.getText());
-        String numTelefono = "Telefono N° (" + jtTelefono.getText() + ")";
+//        try {
 
-        Cliente nuevoCliente = new Cliente(dni, nombre, apellido, ciudad, direccion);
-        boolean c = Menu.guiaTelefonica.agregarCliente(telefono, nuevoCliente);
+            String dni = jtDni.getText();
+            String nombre = jtNombre.getText();
+            String apellido = jtApellido.getText();
+            String ciudad = jtCiudad.getText();
+            String direccion = jtDireccion.getText();
+            Long telefono = Long.parseLong(jtTelefono.getText());
 
-        if (c) {
-            JOptionPane.showMessageDialog(this, "Cliente Existente");
-        } else {
-            ImageIcon iconoAgregar = new ImageIcon(getClass().getResource("/Imagenes/agregar_mediano.png"));
-            JOptionPane.showMessageDialog(this, "Cliente Agregado", numTelefono , WIDTH, iconoAgregar);
-        }
+            String numTelefono = "Telefono N° (" + jtTelefono.getText() + ")";
+
+            Cliente nuevoCliente = new Cliente(dni, nombre, apellido, ciudad, direccion);
+            boolean c = Menu.guiaTelefonica.agregarCliente(telefono, nuevoCliente);
+
+            if (c) {
+                JOptionPane.showMessageDialog(this, "Cliente Existente");
+            } else {
+                ImageIcon iconoAgregar = new ImageIcon(getClass().getResource("/Imagenes/agregar_mediano.png"));
+                JOptionPane.showMessageDialog(this, "Cliente Agregado", numTelefono, WIDTH, iconoAgregar);
+            }
+//        }catch(Exception ex){
+//            JOptionPane.showMessageDialog(this, "Por favor ingrese el Numero de Telefono");
+//        }
     }//GEN-LAST:event_jbAgregarActionPerformed
 
     private void jbNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbNuevoActionPerformed
@@ -210,7 +233,15 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
         jtCiudad.setText("");
         jtDireccion.setText("");
         jtTelefono.setText("");
+        jbAgregar.setEnabled(false);
+        
     }//GEN-LAST:event_jbNuevoActionPerformed
+
+    private void jtTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtTelefonoActionPerformed
+        if(jtTelefono.getText()!=""){
+            jbAgregar.setEnabled(true);
+        }
+    }//GEN-LAST:event_jtTelefonoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -220,6 +251,7 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JButton jbAgregar;

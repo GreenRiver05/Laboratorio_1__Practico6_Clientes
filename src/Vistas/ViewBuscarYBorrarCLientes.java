@@ -8,7 +8,7 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
 
     public ViewBuscarYBorrarCLientes() {
         initComponents();
-
+       
     }
 
     @SuppressWarnings("unchecked")
@@ -40,9 +40,10 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
+        setTitle("Buscar y Borrar Cliente");
         setAutoscrolls(true);
         setNormalBounds(new java.awt.Rectangle(800, 800, 300, 300));
-        setPreferredSize(new java.awt.Dimension(602, 554));
+        setPreferredSize(new java.awt.Dimension(650, 680));
         setVisible(true);
 
         jtDni.setEditable(false);
@@ -160,7 +161,7 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jlGato, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -219,8 +220,8 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
                 + "\n directoro el N° " + jtTelefono.getText() + " ?";
 
         ImageIcon iconoBorrar = new ImageIcon(getClass().getResource("/Imagenes/eliminar_mediano.png"));
-        int respuesta = JOptionPane.showConfirmDialog(this, numero, "BORRAR CLIENTE", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, iconoBorrar);
-
+        int respuesta = JOptionPane.showConfirmDialog(this, numero, "BORRAR CLIENTE", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE,iconoBorrar);
+        
         System.out.println(respuesta);
         if (respuesta == 0) {
             Long telefono = Long.parseLong(jtTelefono.getText());
