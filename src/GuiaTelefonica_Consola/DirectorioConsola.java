@@ -1,10 +1,10 @@
-package Practico6_DirectorioTelefonico;
+package GuiaTelefonica_Consola;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Directorio {   //cambiamos el nombre de la clase
+public class DirectorioConsola {   //cambiamos el nombre de la clase
 
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
     public static final String nada = "\u001B[0m";                      // se utilizo ANSI escape code, color caractares
@@ -16,7 +16,7 @@ public class Directorio {   //cambiamos el nombre de la clase
     private Map<String, Cliente> guiaTelefonica;   //cambiamos el nombre del mapa
     public String opcion = null;                   //el atributo lo necesitamos para el metodo creado para el color de las  opciones
 
-    public Directorio() {
+    public DirectorioConsola() {
         guiaTelefonica = new HashMap<>();
         guiaTelefonica.put("1", new Cliente("4589125", "Hernesto", "quito", "villa mercedes", "Mitre 2345"));
         guiaTelefonica.put("2", new Cliente("77898", "Carlota", "quito", "villa mercedes", "Turrado 125"));

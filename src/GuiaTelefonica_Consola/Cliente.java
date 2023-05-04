@@ -1,4 +1,4 @@
-package Practico6_DirectorioTelefonico;
+package GuiaTelefonica_Consola;
 
 public class Cliente {
 
@@ -21,7 +21,7 @@ public class Cliente {
         this.direccion = direccion;
     }
 
-    public Cliente() {  //eliminamos los constructores ya que no los necesito
+    public Cliente() { 
     }
 
     public String getDni() {

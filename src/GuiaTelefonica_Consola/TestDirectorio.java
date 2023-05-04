@@ -1,4 +1,4 @@
-package Practico6_DirectorioTelefonico;
+package GuiaTelefonica_Consola;
 
 import java.util.Scanner;
 
@@ -12,7 +12,7 @@ public class TestDirectorio {
 
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
-        Directorio guia = new Directorio();
+        DirectorioConsola guia = new DirectorioConsola();
         int salir = 0;
 
         do {
