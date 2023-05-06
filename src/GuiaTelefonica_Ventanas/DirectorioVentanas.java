@@ -4,7 +4,7 @@ import GuiaTelefonica_Consola.Cliente;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DirectorioVentanas {
+public class DirectorioVentanas {  //se crea esta clase para poder usarla con las ventanas
 
     private Map<Long, Cliente> guiaTelefonica;
 

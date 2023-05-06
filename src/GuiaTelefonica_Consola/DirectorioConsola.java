@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class DirectorioConsola {   //cambiamos el nombre de la clase
+public class DirectorioConsola {   // esta clase quedo para usarla con la consola
 
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
     public static final String nada = "\u001B[0m";                      // se utilizo ANSI escape code, color caractares

@@ -8,7 +8,8 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
 
     public ViewBuscarYBorrarCLientes() {
         initComponents();
-       
+        jtTelefono.requestFocus();
+
     }
 
     @SuppressWarnings("unchecked")
@@ -24,15 +25,16 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
         jtDireccion = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        jlDni = new javax.swing.JLabel();
+        jlNombre = new javax.swing.JLabel();
+        jlApellido = new javax.swing.JLabel();
+        jlCiudad = new javax.swing.JLabel();
+        jlDireccion = new javax.swing.JLabel();
         jbBorrar = new javax.swing.JButton();
         jbBuscar = new javax.swing.JButton();
         jbSalir = new javax.swing.JButton();
         jlGato = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         jFormattedTextField1.setText("jFormattedTextField1");
 
@@ -46,15 +48,27 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
         setPreferredSize(new java.awt.Dimension(650, 680));
         setVisible(true);
 
+        jtTelefono.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+
         jtDni.setEditable(false);
+        jtDni.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jtDni.setEnabled(false);
 
         jtNombre.setEditable(false);
+        jtNombre.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jtNombre.setEnabled(false);
 
         jtApellido.setEditable(false);
+        jtApellido.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jtApellido.setEnabled(false);
 
         jtCiudad.setEditable(false);
+        jtCiudad.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jtCiudad.setEnabled(false);
 
         jtDireccion.setEditable(false);
+        jtDireccion.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jtDireccion.setEnabled(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("BUSCAR CLIENTE");
@@ -63,25 +77,30 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel12.setText("TELEFONO:");
 
-        jLabel8.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel8.setText("DNI:");
+        jlDni.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
+        jlDni.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jlDni.setText("DNI:");
+        jlDni.setEnabled(false);
 
-        jLabel10.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel10.setText("NOMBRE:");
+        jlNombre.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
+        jlNombre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jlNombre.setText("NOMBRE:");
+        jlNombre.setEnabled(false);
 
-        jLabel9.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel9.setText("APELLIDO:");
+        jlApellido.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
+        jlApellido.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jlApellido.setText("APELLIDO:");
+        jlApellido.setEnabled(false);
 
-        jLabel11.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel11.setText("CIUDAD:");
+        jlCiudad.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
+        jlCiudad.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jlCiudad.setText("CIUDAD:");
+        jlCiudad.setEnabled(false);
 
-        jLabel13.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel13.setText("DIRECCION:");
+        jlDireccion.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
+        jlDireccion.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jlDireccion.setText("DIRECCION:");
+        jlDireccion.setEnabled(false);
 
         jbBorrar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jbBorrar.setText("BORRAR");
@@ -111,6 +130,8 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
         jlGato.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/gato grande.png"))); // NOI18N
         jlGato.setEnabled(false);
 
+        jSeparator1.setForeground(new java.awt.Color(255, 153, 102));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -128,7 +149,7 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jlCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jtCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
@@ -139,19 +160,19 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(jtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jlDni, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jtDni, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jlNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jlApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jlDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,50 +181,54 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
                                 .addComponent(jbBuscar))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jlGato, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(17, Short.MAX_VALUE))
+                                .addComponent(jlGato, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 603, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(61, 61, 61)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jbBuscar))
-                                                .addGap(79, 79, 79)
-                                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(jtDni, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jbBuscar))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jlDni, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jtDni, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jlNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(24, 24, 24)
-                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jlApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jtApellido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jtCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jlCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtCiudad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(41, 41, 41))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(228, 228, 228)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
                         .addComponent(jlGato, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -220,8 +245,8 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
                 + "\n directoro el N° " + jtTelefono.getText() + " ?";
 
         ImageIcon iconoBorrar = new ImageIcon(getClass().getResource("/Imagenes/eliminar_mediano.png"));
-        int respuesta = JOptionPane.showConfirmDialog(this, numero, "BORRAR CLIENTE", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE,iconoBorrar);
-        
+        int respuesta = JOptionPane.showConfirmDialog(this, numero, "BORRAR CLIENTE", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, iconoBorrar);
+
         System.out.println(respuesta);
         if (respuesta == 0) {
             Long telefono = Long.parseLong(jtTelefono.getText());
@@ -235,6 +260,16 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
             jtTelefono.setText("");
             jbBorrar.setEnabled(false);
             jlGato.setEnabled(false);
+            jlDni.setEnabled(false);
+            jlNombre.setEnabled(false);
+            jlApellido.setEnabled(false);
+            jlCiudad.setEnabled(false);
+            jlDireccion.setEnabled(false);
+            jtDni.setEnabled(false);
+            jtNombre.setEnabled(false);
+            jtApellido.setEnabled(false);
+            jtCiudad.setEnabled(false);
+            jtDireccion.setEnabled(false);
             JOptionPane.showMessageDialog(this, "ELIMINADO");
         }
 
@@ -243,6 +278,24 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
 
     private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
         dispose();
+         jtDni.setText("");
+            jtNombre.setText("");
+            jtApellido.setText("");
+            jtCiudad.setText("");
+            jtDireccion.setText("");
+            jtTelefono.setText("");
+            jbBorrar.setEnabled(false);
+            jlGato.setEnabled(false);
+            jlDni.setEnabled(false);
+            jlNombre.setEnabled(false);
+            jlApellido.setEnabled(false);
+            jlCiudad.setEnabled(false);
+            jlDireccion.setEnabled(false);
+            jtDni.setEnabled(false);
+            jtNombre.setEnabled(false);
+            jtApellido.setEnabled(false);
+            jtCiudad.setEnabled(false);
+            jtDireccion.setEnabled(false);
     }//GEN-LAST:event_jbSalirActionPerformed
 
     private void jbBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarActionPerformed
@@ -258,6 +311,17 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
                 jtDireccion.setText(usuario.getDireccion());
                 jbBorrar.setEnabled(true);
                 jlGato.setEnabled(true);
+                jlDni.setEnabled(true);
+                jlNombre.setEnabled(true);
+                jlApellido.setEnabled(true);
+                jlCiudad.setEnabled(true);
+                jlDireccion.setEnabled(true);
+                jtDni.setEnabled(true);
+                jtNombre.setEnabled(true);
+                jtApellido.setEnabled(true);
+                jtCiudad.setEnabled(true);
+                jtDireccion.setEnabled(true);
+
             } else {
                 JOptionPane.showMessageDialog(this, "Telefono no Registrado");
             }
@@ -274,16 +338,17 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton jbBorrar;
     private javax.swing.JButton jbBuscar;
     private javax.swing.JButton jbSalir;
+    private javax.swing.JLabel jlApellido;
+    private javax.swing.JLabel jlCiudad;
+    private javax.swing.JLabel jlDireccion;
+    private javax.swing.JLabel jlDni;
     private javax.swing.JLabel jlGato;
+    private javax.swing.JLabel jlNombre;
     private javax.swing.JTextField jtApellido;
     private javax.swing.JTextField jtCiudad;
     private javax.swing.JTextField jtDireccion;
