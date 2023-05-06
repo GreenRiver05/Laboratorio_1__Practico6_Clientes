@@ -7,11 +7,12 @@ public class Cliente {
     public static final String verde = "\u001B[32m";                    // se utilizo ANSI escape code, color caractares
     public static final String amarillo = "\u001B[33m";                 // se utilizo ANSI escape code, color caractares
     public static final String violeta = "\u001B[35m";                  // se utilizo ANSI escape code, color caractares
-    String dni;
-    String nombre;
-    String apellido;
-    String ciudad;
-    String direccion;
+    
+    protected String dni;
+    protected String nombre;
+    protected String apellido;
+    protected String ciudad;
+    protected String direccion;
 
     public Cliente(String dni, String nombre, String apellido, String ciudad, String direccion) {
         this.dni = dni;

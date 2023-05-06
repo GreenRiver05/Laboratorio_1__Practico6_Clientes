@@ -74,7 +74,7 @@ public class DirectorioConsola {   // esta clase quedo para usarla con la consol
         int contador = 0;
         for (Map.Entry<String, Cliente> c : guiaTelefonica.entrySet()) {
 
-            if (c.getValue().getApellido().equals(buscarApellido)) {
+            if (c.getValue().getApellido().equalsIgnoreCase(buscarApellido)) {
                 System.out.println("\n" + nada + "DNI = " + c.getValue().getDni() + "        Nombre = " + c.getValue().getNombre() + "        Ciudad = "
                         + c.getValue().getCiudad() + "      Direccion = " + c.getValue().getDireccion() + amarillo + "      TELEFONO = " + c.getKey());
                 contador++;
@@ -92,7 +92,7 @@ public class DirectorioConsola {   // esta clase quedo para usarla con la consol
         int contador = 0;
         for (Map.Entry<String, Cliente> c : guiaTelefonica.entrySet()) {
 
-            if (c.getValue().getCiudad().equals(buscarCiudad)) {
+            if (c.getValue().getCiudad().equalsIgnoreCase(buscarCiudad)) {
                 System.out.println("\n" + nada + "DNI = " + c.getValue().getDni() + "        Nombre y Apellido = " + c.getValue().getNombre() + " "
                         + c.getValue().getApellido() + "      Direccion = " + c.getValue().getDireccion() + amarillo + "      TELEFONO = " + c.getKey());
                 contador++;
