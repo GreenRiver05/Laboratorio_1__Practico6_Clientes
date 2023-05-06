@@ -17,6 +17,7 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
         jlEnterCiudad.setVisible(false);
         jlEnterDireccion.setVisible(false);
         jlEnterTelefono.setVisible(false);
+        jbEditar.setVisible(false);
 
     }
 
@@ -53,6 +54,7 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jbEditar = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -204,6 +206,14 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
 
         jLabel7.setFocusable(false);
 
+        jbEditar.setText("EDITAR");
+        jbEditar.setEnabled(false);
+        jbEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbEditarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -280,8 +290,13 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jlEnterApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(10, 10, 10)
-                .addComponent(jbSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jbSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jbEditar)))
                 .addContainerGap(15, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(166, 166, 166)
@@ -337,7 +352,8 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbEditar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlEnterTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -372,7 +388,9 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
         jlEnterDireccion.setVisible(false);
         jlEnterTelefono.setVisible(false);
         jlEnterDni.setVisible(true);
-        jtDni.requestFocus();
+        jtDni.setEnabled(true);
+        jbEditar.setVisible(false);
+        jbEditar.setEnabled(false);
 
     }//GEN-LAST:event_jbSalirActionPerformed
 
@@ -405,6 +423,8 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
             jlNuevoAgregado.setText("Cliente Agregado");
             jlNuevoAgregado.setForeground(Color.GRAY);
             jlEnterTelefono.setText("Haga Click en |Nuevo| o |Salir|");
+            jbEditar.setVisible(false);
+            jbEditar.setEnabled(false);
         }
 
     }//GEN-LAST:event_jbAgregarActionPerformed
@@ -428,6 +448,8 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
         jlEnterTelefono.setVisible(false);
         jlEnterDni.setVisible(true);
         jtDni.requestFocus();
+        jbEditar.setVisible(false);
+        jbEditar.setEnabled(false);
 
 
     }//GEN-LAST:event_jbNuevoActionPerformed
@@ -438,6 +460,8 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
             Long telefono = Long.parseLong(jtTelefono.getText());
             jbAgregar.setEnabled(true);
             jlEnterTelefono.setText("Haga Click en |Agregar| , |Nuevo| o |Salir|");
+            jtTelefono.setEnabled(false);
+            jbEditar.setEnabled(true);
 
         } catch (NumberFormatException ex) {
             ImageIcon iconoNumeroTelefonico = new ImageIcon(getClass().getResource("/Imagenes/gatitoVampiro.png"));
@@ -489,8 +513,14 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
             jtTelefono.requestFocus();
             jlEnterDireccion.setVisible(false);
             jlEnterTelefono.setVisible(true);
+            jbEditar.setVisible(true);
         }
     }//GEN-LAST:event_jtDireccionActionPerformed
+
+    private void jbEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEditarActionPerformed
+        jtTelefono.setEnabled(true);
+        jbAgregar.setEnabled(false);
+    }//GEN-LAST:event_jbEditarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -508,6 +538,7 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JButton jbAgregar;
+    private javax.swing.JButton jbEditar;
     private javax.swing.JButton jbNuevo;
     private javax.swing.JButton jbSalir;
     private javax.swing.JLabel jlEnterApellido;
