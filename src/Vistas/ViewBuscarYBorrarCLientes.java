@@ -38,7 +38,6 @@ public class ViewBuscarYBorrarCLientes extends javax.swing.JInternalFrame {
 
         jFormattedTextField1.setText("jFormattedTextField1");
 
-        setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);

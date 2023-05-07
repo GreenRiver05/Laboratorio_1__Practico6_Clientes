@@ -56,7 +56,6 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
         jLabel7 = new javax.swing.JLabel();
         jbEditar = new javax.swing.JButton();
 
-        setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
@@ -368,6 +367,7 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+        
 
     private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
         dispose();
@@ -391,6 +391,8 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
         jtDni.setEnabled(true);
         jbEditar.setVisible(false);
         jbEditar.setEnabled(false);
+        jlNuevoAgregado.setText("Cliente Nuevo");
+        jlNuevoAgregado.setForeground(Color.BLACK);
 
     }//GEN-LAST:event_jbSalirActionPerformed
 
