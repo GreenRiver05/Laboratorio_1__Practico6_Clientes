@@ -1,5 +1,10 @@
 package GuiaTelefonica_Consola;
 
+//              GRUPO 9
+//INTEGRANTES : Pablo Nicolas Peñaloza
+//              Alex Gustavo Astudillo Duran
+//              Gabriel Ezequiel Becerra Diaz
+
 public class Cliente {
 
     public static final String nada = "\u001B[0m";                      // se utilizo ANSI escape code, color caractares

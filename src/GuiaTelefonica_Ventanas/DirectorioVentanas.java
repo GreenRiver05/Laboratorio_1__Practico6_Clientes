@@ -1,5 +1,10 @@
 package GuiaTelefonica_Ventanas;
 
+//              GRUPO 9
+//INTEGRANTES : Pablo Nicolas Peñaloza
+//              Alex Gustavo Astudillo Duran
+//              Gabriel Ezequiel Becerra Diaz
+
 import GuiaTelefonica_Consola.Cliente;
 import java.util.HashMap;
 import java.util.Map;

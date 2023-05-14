@@ -367,7 +367,7 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-        
+
 
     private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
         dispose();
@@ -409,7 +409,7 @@ public class ViewAgregarClientes extends javax.swing.JInternalFrame {
 
         Cliente nuevoCliente = new Cliente(dni, nombre, apellido, ciudad, direccion);
         boolean c = Menu.guiaTelefonica.agregarCliente(telefono, nuevoCliente);
-
+        
         if (c) {
             JOptionPane.showMessageDialog(this, "Cliente Existente");
         } else {

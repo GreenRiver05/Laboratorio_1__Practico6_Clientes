@@ -1,10 +1,17 @@
 package Vistas;
 
+//              GRUPO 9
+//INTEGRANTES : Pablo Nicolas Peñaloza
+//              Alex Gustavo Astudillo Duran
+//              Gabriel Ezequiel Becerra Diaz
+
 import GuiaTelefonica_Ventanas.DirectorioVentanas;
 
 public class Menu extends javax.swing.JFrame {
 
     public static DirectorioVentanas guiaTelefonica = new DirectorioVentanas();  //creamos una instancia static de directorio para poder usarla en todas las ventanas
+    
+    
     ViewBuscarYBorrarCLientes buscarBorrar = new ViewBuscarYBorrarCLientes();
     ViewAgregarClientes agregar = new ViewAgregarClientes();
 
@@ -17,6 +24,7 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollBar1 = new javax.swing.JScrollBar();
         jEscritorio = new javax.swing.JDesktopPane();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -97,7 +105,7 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(jEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jEscritorioLayout.createSequentialGroup()
                                 .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jEscritorioLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -188,7 +196,7 @@ public class Menu extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jEscritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 778, Short.MAX_VALUE)
+                .addComponent(jEscritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -271,6 +279,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jSalir;
     private javax.swing.JMenuItem jSalirDelSistema;
+    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JMenuItem jmAgregar;
     private javax.swing.JMenuItem jmBuscarYBorrar;
     // End of variables declaration//GEN-END:variables
